@@ -12,6 +12,8 @@ public class Aplicacao {
 
         aplicacao.exercicio02("Hello, Word!");
 
+        aplicacao.exercicio03("babad");
+
     }
 
     public void exercicio01(String texto) {
@@ -62,6 +64,38 @@ public class Aplicacao {
          */
         texto.chars().distinct().forEach(letra -> TextoSemPalavrasRepetidas.append((char) letra));
         System.out.println(TextoSemPalavrasRepetidas.toString());
+    }
+
+    public void exercicio03(String texto) {
+
+        /*
+         * Utilizando uma lista de caracter, usei recursos de coleções da classe String
+         * chars para desmebrar palavras em caracteres, e o foreach para adicionar a
+         * essa lista
+         */
+        List<Character> arrayDeCaracter = new ArrayList<>();
+        texto.chars().forEach(letra -> arrayDeCaracter.add((char) letra));
+        /* String buffer para concatenar o texto final */
+        StringBuffer StringFinal = new StringBuffer();
+
+        int quantidadeDeCaracter = arrayDeCaracter.size();
+
+        /*
+         * Utilizando o for para interar dentro da coleções que contem os caracteres,
+         * o mesmo ira construindo a palavra dentro do for, e fara uma validação, se for
+         * palavra que tiver o mesmo sentido invertido
+         */
+        for (int i = 0; i < quantidadeDeCaracter; i++) {
+            StringFinal.append(arrayDeCaracter.get(i));
+            if (i > 1 && StringFinal.toString()
+                    .equals(new StringBuffer()
+                            .append(StringFinal.toString()).reverse().toString())) {
+
+                System.out.println(StringFinal.toString());
+
+            }
+        }
+
     }
 
 }
