@@ -14,6 +14,10 @@ public class Aplicacao {
 
         aplicacao.exercicio03("babad");
 
+        aplicacao.exercicio04("hello. how are you? i`m fine, thank you.");
+
+        aplicacao.exercicio05("racecar");
+
     }
 
     public void exercicio01(String texto) {
@@ -96,6 +100,43 @@ public class Aplicacao {
             }
         }
 
+    }
+
+    public void exercicio04(String texto) {
+        StringBuffer buffer = new StringBuffer();
+        String[] strings = texto.split("[.]");
+        List<String> listaDaStringSeparada = new ArrayList<>(Arrays.asList(strings));
+        for (String interacao : listaDaStringSeparada) {
+            String string = interacao.strip();
+            String maiuscula = string.substring(0, 1).toUpperCase() + string.substring(1).toLowerCase();
+            buffer.append(maiuscula + ". ");
+
+        }
+
+
+        String ponto = buffer.toString();
+
+        String string = maisculoInterrogacao(ponto);
+        System.out.println(ponto);
+    }
+
+    public String maisculoInterrogacao(String texto) {
+
+        StringBuffer buffer = new StringBuffer();
+        String[] strings = texto.split("[?]");
+        List<String> listaDaStringSeparada = new ArrayList<>(Arrays.asList(strings));
+        for (String interacao : listaDaStringSeparada) {
+            String stringStripada = interacao.strip();
+            String maiuscula = stringStripada.substring(0, 1).toUpperCase() + stringStripada.substring(1).toLowerCase();
+            buffer.append(maiuscula + "? ");
+        }
+
+        return buffer.toString().substring(0, buffer.length() - 2);
+    }
+
+    public void exercicio05(String texto) {
+        System.out.println(texto.toString().equals(new StringBuffer()
+                .append(texto.toString()).reverse().toString()));
     }
 
 }
