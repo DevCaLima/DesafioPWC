@@ -8,15 +8,42 @@ public class Aplicacao {
 
         Aplicacao aplicacao = new Aplicacao();
 
+        System.out.println("---------------------------------------------------");
+
+        System.out.println("Exercicio 01 - Reverter a ordem das palavra nas frases, mantendo a ordem das palavras");
+        System.out.println("Valor inserido: Hello, Word! OpenAl is amazing");
+        System.out.println("Valor de Saida: ");
         aplicacao.exercicio01("Hello, Word! OpenAl is amazing");
 
+        System.out.println("---------------------------------------------------");
+
+        System.out.println("Exercicio 02 - remover caracter duplicados");
+        System.out.println("Valor inserido: Hello, Word!");
+        System.out.println("Valor de Saida: ");
         aplicacao.exercicio02("Hello, Word!");
 
+        System.out.println("---------------------------------------------------");
+
+        System.out.println("Exercicio 03 - Encontre a substring palindroma mais longa");
+        System.out.println("Valor inserido: babad");
+        System.out.println("Valor de Saida: ");
         aplicacao.exercicio03("babad");
 
+        System.out.println("---------------------------------------------------");
+
+        System.out.println("Exercicio 04 - Coloque em maiuscula a letra maiuscula de cada frase");
+        System.out.println("Valor inserido: hello. how are you? i`m fine, thank you.");
+        System.out.println("Valor de Saida: ");
         aplicacao.exercicio04("hello. how are you? i`m fine, thank you.");
 
+        System.out.println("---------------------------------------------------");
+
+        System.out.println("Exercicio 05 - Verifique se a string é um anagrama de um palindromo");
+        System.out.println("Valor inserido: racecar");
+        System.out.println("Valor de Saida: ");
         aplicacao.exercicio05("racecar");
+
+        System.out.println("---------------------------------------------------");
 
     }
 
@@ -112,7 +139,6 @@ public class Aplicacao {
             buffer.append(maiuscula + ". ");
 
         }
-
 
         String ponto = buffer.toString();
 
